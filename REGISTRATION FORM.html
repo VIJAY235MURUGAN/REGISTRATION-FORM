@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <style>
+         /* body css for whole page */
+    body
+    {
+	    margin:0px;
+	    background-color:navy;
+	    background-image:url(image/background.jpg);
+	    color:goldenrod;
+	    font-family:Arial, Helvetica, sans-serif;
+    }
+    
+    #main{width:850px; height:auto; overflow:hidden; padding-bottom:20px; margin-left:auto; margin-right:auto; 
+    border-radius:23.589px; padding-left:10px; margin-top:50px; border-top:5.89px double goldenrod; 
+    border-bottom:5.89px double goldenrod; padding-top:20px;
+    }
+    
+    #main table{font-family:'Times New Roman', Times, serif;font-size: 23.5px;font-weight: bolder;font-style: italic;}
+    /* css code for textbox */
+    #main .tb{height:23.589px; width:230px; border:5.238px solid crimson; color:indigo; font-weight:bolder;font-family: 'Times New Roman', Times, serif;font-size: 18.235px;border-width: 5.238px;border-radius: 8.5px;background-color: lightgreen; opacity:1.235;}
+    
+    #main .tb:focus{height:28px; border:1px solid crimson; outline:none; border:5px solid purple;}
+
+    /* css code for button*/
+    #main .btn{width:185px; height:32px; outline:indigo;  color:#f7f7f7; font-weight:bold; border:5.2389px solid crimson; 
+    text-shadow: 0px 0.5px 0.5px #fff; border-radius: 10px; font-weight: 600; color: crimson; letter-spacing: 1px; 
+    font-size:18.235px; background-color: lightpink; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;}
+  
+    #main .btn:hover{background-color: lightgreen; outline:none;  border-radius: 10px; color: indigo; border:5.2389px solid crimson;
+    -webkit-transition: O.5s; -moz-transition: 0.5s; transition: 0.5s; }
+
+	#login .btn{width:185px; height:32px; outline:indigo;  color:#f7f7f7; font-weight:bold; border:5.2389px solid crimson; 
+    text-shadow: 0px 0.5px 0.5px #fff; border-radius: 10px; font-weight: 600; color: crimson; letter-spacing: 1px; 
+    font-size:18.235px; background-color:bisque; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;}
+  
+    #login .btn:hover{background-color: lightgreen; outline:none;  border-radius: 10px; color: indigo; border:5.2389px solid crimson;
+    -webkit-transition: O.5s; -moz-transition: 0.5s; transition: 0.5s; }
+
+	::placeholder
+	{
+		color: crimson;
+		font-size: 18.235px;
+		font-weight: bolder;
+		font-style: italic;
+		font-family: 'Times New Roman', Times, serif;
+	}
+	#login
+	{
+        width:850px; height:auto; overflow:hidden; padding-bottom:20px; margin-left:auto; margin-right:auto; 
+        border-radius:23.589px; padding-left:10px; margin-top:50px; border-top:5.89px double goldenrod; 
+        border-bottom:5.89px double goldenrod; padding-top:20px; color: crimson; font-size: 23.5px; font-weight: bolder; 
+		font-family: 'Times New Roman', Times, serif; font-style: italic; text-align: center;
+	}
+	input:required
+	{
+		background-color: goldenrod;
+	}
+	datalist.opt
+	{
+        background-color : lightgreen;
+		color: crimson;
+	}
+    </style>
+  </head>
+
+	<body>
+	<!-- Main div code -->
+	<div id="main">
+	<div class="h-tag">
+	<h2><center>REGISTRATION FORM</center></h2>
+	</div>
+	<!-- Registration Form div -->
+	<div class="login">
+	<table cellspacing="2" align="center" cellpadding="5" border="0">
+	<tr>
+	<td align="right">Enter First Name :</td>
+	<td><input type="text" placeholder="Enter your First Name here" id="t1-F" class="tb" required/></td>
+	</tr>
+	<td align="right">Enter Last Name :</td>
+	<td><input type="text" placeholder="Enter your Last Name here" id="t1-L" class="tb" required/></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Email ID :</td>
+	<td><input type="text" placeholder="Enter your Email ID here" id="t2" class="tb" required/></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Username :</td>
+	<td><input type="text" placeholder="Enter Username here" id="t3" class="tb" required/></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Password :</td>
+	<td><input type="password" placeholder="Enter Password here" id="t4" class="tb" required/></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Confirm Password :</td>
+	<td><input type="password" placeholder="Enter Password here" id="t5" class="tb" required/></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Contact Number :</td>
+	<td><input type="number" placeholder="Enter Phone Number here" id="t6" class="tb" required/></td>
+	</tr>
+	<td align="right">Enter Your Gender :</td>
+	<td><input type="text" name="gender" list="gender" placeholder="Enter Your Gender here" id="t7" class="tb" required/>
+	<datalist id="gender" class="opt">
+		<option value="MALE" ></option>
+		<option value="FEMALE" ></option>
+	</datalist>
+	</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td>
+	<input type="reset" value="Clear Form" onclick="clearFunc()" id="res" class="btn" />
+	<input type="submit" value="Create Account" class="btn" onclick="registration()" /></td>
+	</tr>
+	</table>
+	</div>
+	<!-- create account box ending here-->
+	</div>
+	<!-- Main div ending here-->
+	<div id="login" class="login" style="display: none;">
+		<p>YOUR LOGIN DETAILS!</p>
+		<span id="login-details"></span><br><br><br>
+	<input type="button" class="btn" onclick="comehome()" value="HOME!"></input>
+	</div>
+	<!--Login div ending here-->
+    <script>
+    function registration()
+	{
+		var First_name= document.getElementById("t1-F").value;
+		var Last_name= document.getElementById("t1-L").value;
+		var email= document.getElementById("t2").value;
+		var uname= document.getElementById("t3").value;
+		var pwd= document.getElementById("t4").value;			
+		var cpwd= document.getElementById("t5").value;
+		var contact= document.getElementById("t6").value;
+		var gender= document.getElementById("t7").value;
+		document.getElementById("login-details").innerHTML="YOUR FULL NAME:" + "&nbsp;&nbsp;&nbsp;" + First_name + "&nbsp;&nbsp;&nbsp;" + Last_name + "<br><br>" + "YOUR email I.D:" + "&nbsp;&nbsp;&nbsp;" + email + "<br><br>" + "YOUR USERNAME:" + "&nbsp;&nbsp;&nbsp;" + uname + "<br><br>" + "YOUR CONTACT NUMBER:" +  "&nbsp;&nbsp;&nbsp;" + contact + "<br><br>" + "YOUR GENDER:" +  "&nbsp;&nbsp;&nbsp;" + gender + "<br><br><br>" + "PASSWORD CANNOT BE REVEALED SINCE IT HAS TO BE NOTED WHILE LOGIN!!!";
+        //email id expression code
+		var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+		var letters = /^[A-Za-z]+$/;
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		var Contact = /^(([6-9]{1})+([0-9]{9}))+$/;
+	    if(First_name=='')
+		{
+			alert('Please enter your First name');
+			return false;
+		}
+		else if(!letters.test(First_name))
+		{
+			alert('First name field required only alphabet characters');
+		}
+		else
+		{
+			return false;
+		}
+		if(Last_name=='')
+		{
+			alert('Please enter your Last name');
+		}
+		else if(!letters.test(Last_name))
+		{
+			alert('Last name field required only alphabet characters');
+		}
+		else
+		{
+			return false;
+		}
+		if(email=='')
+		{
+			alert('Please enter your user email id');
+		}
+		else if (!filter.test(email))
+		{
+			alert('Invalid email');
+		}
+		else
+		{
+			return false;
+		}
+		if(uname=='')
+		{
+			alert('Please enter the user name.');
+		}
+		else if(!letters.test(uname))
+		{
+			alert('User name field required only alphabet characters');
+		}
+		else
+		{
+			return false;
+		}
+		if(pwd=='')
+		{
+			alert('Please enter Password');
+		}
+		else if(!pwd_expression.test(pwd))
+		{
+			alert ('Upper case, Lower case, Special character and Numeric letter are required in Password filed');
+		}
+		else if(document.getElementById("t5").value.length < 8)
+		{
+			alert ('Password minimum length is 8');
+		}
+		else if(document.getElementById("t5").value.length > 13)
+		{
+			alert ('Password max length is 13');
+		}
+		else
+		{
+			return false;
+		}
+		if(cpwd=='')
+		{
+			alert('Enter Confirm Password');
+		}
+		else if(pwd != cpwd)
+		{
+			alert ('Password not Matched');
+		}
+		else
+		{
+			return false;
+		}
+		if (contact=='')
+		{
+			alert ('Enter Contact Number');
+		}
+		else if(!Contact.test(contact))
+		{
+            alert ('Contact Number should start between 6-9 and have 10 digits');
+		}
+		else
+		{
+			return false;
+		}
+		if (gender=='')
+		{
+			alert('Please fill the Gender option');
+			return false;
+		}
+		else
+		{			                            
+            alert('Thank You for Login & You are Redirecting to Login Page');
+			// Redirecting to login page.
+		}
+		document.getElementById("login").style.display="block";
+		document.getElementById("main").style.display="none";
+	}
+    function comehome()
+    {
+	document.getElementById("login").style.display="none";
+	document.getElementById("main").style.display="block";
+    }
+    function clearFunc()
+	{
+		document.getElementById("t1-F").value="";
+		document.getElementById("t1-L").value="";
+		document.getElementById("t2").value="";
+		document.getElementById("t3").value="";
+		document.getElementById("t4").value="";
+		document.getElementById("t5").value="";
+		document.getElementById("t6").value="";
+		document.getElementById("t7").value="";
+	}
+</script>
+	</body>
+	</html>
